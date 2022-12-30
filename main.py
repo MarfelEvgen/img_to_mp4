@@ -6,6 +6,7 @@ from PIL import Image
 SOURCE_DIR = 'images/'
 files = os.listdir(SOURCE_DIR)
 
+# Video frame size
 img_video_width = 414
 img_video_height = 842
 
@@ -18,7 +19,7 @@ frameSize = (img_video_width, img_video_height)
 
 suffix = '_banners'
 
-out = cv2.VideoWriter(f'd:\_spizgeno_s_figmaweb{suffix}.mp4', cv2.VideoWriter_fourcc(*'mp4v'), 0.5, frameSize)
+out = cv2.VideoWriter(f'd:/file_name{suffix}.mp4', cv2.VideoWriter_fourcc(*'mp4v'), 0.5, frameSize)
 
 for filename in glob.glob('images/*'):
     img = cv2.imread(filename)
